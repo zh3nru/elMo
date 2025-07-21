@@ -5,8 +5,11 @@ import os
 
 load_dotenv()
 
-url = os.environ["SUPABASE_URL"] or st.secrets.get("SUPABASE_URL")
-key = os.environ["SUPABASE_KEY"] or st.secrets.get("SUPABASE_KEY")
+# url = os.environ["SUPABASE_URL"] 
+# key = os.environ["SUPABASE_KEY"] 
+
+url = st.secrets.get("SUPABASE_URL")
+key = st.secrets.get("SUPABASE_KEY")
 
 supabase: Client = create_client(url, key)
 

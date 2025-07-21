@@ -8,7 +8,8 @@ load_dotenv()
 
 client = OpenAI(
     base_url="https://models.github.ai/inference",
-    api_key=os.environ["GITHUB_TOKEN"] or st.secrets("GITHUB_TOKEN")
+    # api_key=os.environ["GITHUB_TOKEN"] 
+    api_key=st.secrets("GITHUB_TOKEN")
 )
 
 st.title("🎭 elMo - Your eMotion-based chatbot!")
